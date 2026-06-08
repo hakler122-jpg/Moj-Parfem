@@ -41,6 +41,8 @@ color:black;
 font-weight:600;
 text-transform:uppercase;
 letter-spacing:2px;
+display:block;
+padding:10px;
 }
 
 /* HERO */
@@ -140,19 +142,43 @@ position:relative;
 .dropdown-content{
 display:none;
 position:absolute;
-top:25px;
+top:40px;
 left:0;
 background:white;
-min-width:180px;
-}
-
-.dropdown-content a{
-display:block;
-padding:12px;
+min-width:220px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
 .dropdown:hover .dropdown-content{
 display:block;
+}
+
+.dropdown-content a:hover{
+background:#f2f2f2;
+}
+
+/* SUBMENU */
+
+.submenu{
+position:relative;
+}
+
+.submenu-content{
+display:none;
+position:absolute;
+left:100%;
+top:0;
+background:white;
+min-width:220px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.submenu:hover .submenu-content{
+display:block;
+}
+
+.submenu-content a:hover{
+background:#f2f2f2;
 }
 
 @media(max-width:900px){
@@ -180,29 +206,55 @@ gap:15px;
 
 <div class="dropdown">
 <a href="#">Muški</a>
+
 <div class="dropdown-content">
-<a href="#">Dior</a>
-<a href="#">Tom Ford</a>
-<a href="#">Versace</a>
+
+<div class="submenu">
+<a href="#">Mirisi Kao ►</a>
+
+<div class="submenu-content">
+<a href="#">Tommy Shelby</a>
+<a href="#">James Bond</a>
+<a href="#">Bruce Wayne</a>
+<a href="#">John Wick</a>
+<a href="#">Harvey Specter</a>
+</div>
+
+</div>
+
 </div>
 </div>
 
 <div class="dropdown">
 <a href="#">Ženski</a>
+
 <div class="dropdown-content">
-<a href="#">Chanel</a>
-<a href="#">Gucci</a>
-<a href="#">YSL</a>
+
+<div class="submenu">
+<a href="#">Mirisi Kao ►</a>
+
+<div class="submenu-content">
+<a href="#">Selina Kyle</a>
+<a href="#">Lara Croft</a>
+<a href="#">Wonder Woman</a>
+<a href="#">Daenerys Targaryen</a>
+<a href="#">Morticia Addams</a>
+</div>
+
+</div>
+
 </div>
 </div>
 
 <div class="dropdown">
 <a href="#">Brendovi</a>
+
 <div class="dropdown-content">
 <a href="#">Armani</a>
 <a href="#">Prada</a>
 <a href="#">Givenchy</a>
 </div>
+
 </div>
 
 </nav>
