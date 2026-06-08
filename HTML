@@ -8,200 +8,166 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:#000;
-    overflow:hidden;
+background:#0a0a0a;
+overflow:hidden;
 }
 
 /* MENU */
 
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    padding:18px;
-    z-index:1000;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:70px;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+z-index:100;
 }
 
-.dropdown{
-    position:relative;
-}
-
-.dropdown a{
-    text-decoration:none;
-    color:#000;
-    font-weight:bold;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.dropdown-content{
-    display:none;
-    position:absolute;
-    background:white;
-    min-width:180px;
-    top:30px;
-    left:0;
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
-}
-
-.dropdown-content a{
-    display:block;
-    padding:12px;
-}
-
-.dropdown:hover .dropdown-content{
-    display:block;
+nav a{
+text-decoration:none;
+color:black;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:2px;
 }
 
 /* HERO */
 
 .hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
 }
 
-.frame{
-    width:92%;
-    height:85%;
-    border:1px solid white;
-    position:relative;
+/* STATUA */
+
+.statue{
+position:absolute;
+right:5%;
+bottom:-50px;
+height:90vh;
+opacity:.12;
+filter:grayscale(100%);
 }
 
-/* DEKORATIVNE LINIJE */
+/* GLOW */
 
-.line1{
-    position:absolute;
-    top:100px;
-    left:100px;
-    width:250px;
-    height:1px;
-    background:white;
+.glow{
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(255,255,255,.12),
+transparent 70%);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
 }
 
-.line2{
-    position:absolute;
-    bottom:100px;
-    right:100px;
-    width:250px;
-    height:1px;
-    background:white;
+/* SADRZAJ */
+
+.content{
+position:relative;
+z-index:5;
+text-align:center;
+color:white;
 }
 
-.line3{
-    position:absolute;
-    top:120px;
-    right:120px;
-    width:1px;
-    height:200px;
-    background:white;
+.small{
+letter-spacing:8px;
+color:#888;
+text-transform:uppercase;
+font-size:12px;
 }
 
-.line4{
-    position:absolute;
-    bottom:120px;
-    left:120px;
-    width:1px;
-    height:200px;
-    background:white;
+h1{
+font-size:110px;
+font-weight:100;
+letter-spacing:18px;
+margin:20px 0;
 }
 
-/* NASLOV */
-
-.title{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:white;
-    z-index:10;
+.line{
+width:180px;
+height:1px;
+background:white;
+margin:25px auto;
+opacity:.5;
 }
 
-.title h1{
-    font-size:90px;
-    font-weight:100;
-    letter-spacing:20px;
+.desc{
+color:#aaa;
+letter-spacing:4px;
+text-transform:uppercase;
 }
 
-.title p{
-    margin-top:15px;
-    color:#aaa;
-    letter-spacing:5px;
-    text-transform:uppercase;
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:15px 40px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+transition:.3s;
 }
 
-/* 3D PARFEM */
-
-.perfume{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:220px;
-    height:320px;
-    animation:rotate 12s linear infinite;
-    transform-style:preserve-3d;
+.btn:hover{
+background:white;
+color:black;
 }
 
-.bottle{
-    width:100%;
-    height:100%;
-    border:2px solid rgba(255,255,255,.8);
-    background:linear-gradient(
-        to bottom,
-        rgba(255,255,255,.15),
-        rgba(255,255,255,.02)
-    );
-    border-radius:20px;
-    position:relative;
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
 }
 
-.cap{
-    width:90px;
-    height:50px;
-    background:white;
-    position:absolute;
-    top:-50px;
-    left:50%;
-    transform:translateX(-50%);
+.dropdown-content{
+display:none;
+position:absolute;
+top:25px;
+left:0;
+background:white;
+min-width:180px;
 }
 
-@keyframes rotate{
-    from{
-        transform:
-        translate(-50%,-50%)
-        rotateY(0deg);
-    }
-    to{
-        transform:
-        translate(-50%,-50%)
-        rotateY(360deg);
-    }
+.dropdown-content a{
+display:block;
+padding:12px;
 }
 
-@media(max-width:768px){
-
-.title h1{
-    font-size:45px;
-    letter-spacing:8px;
+.dropdown:hover .dropdown-content{
+display:block;
 }
 
-.perfume{
-    width:150px;
-    height:220px;
+@media(max-width:900px){
+
+h1{
+font-size:50px;
+letter-spacing:8px;
+}
+
+.statue{
+height:60vh;
+}
+
+nav{
+gap:15px;
 }
 
 }
@@ -225,8 +191,8 @@ nav{
 <a href="#">Ženski</a>
 <div class="dropdown-content">
 <a href="#">Chanel</a>
-<a href="#">YSL</a>
 <a href="#">Gucci</a>
+<a href="#">YSL</a>
 </div>
 </div>
 
@@ -234,8 +200,8 @@ nav{
 <a href="#">Brendovi</a>
 <div class="dropdown-content">
 <a href="#">Armani</a>
-<a href="#">Dior</a>
 <a href="#">Prada</a>
+<a href="#">Givenchy</a>
 </div>
 </div>
 
@@ -243,23 +209,23 @@ nav{
 
 <section class="hero">
 
-<div class="frame">
+<div class="glow"></div>
 
-<div class="line1"></div>
-<div class="line2"></div>
-<div class="line3"></div>
-<div class="line4"></div>
+<img src="statua.png" class="statue">
 
-<div class="perfume">
-<div class="bottle">
-<div class="cap"></div>
-</div>
-</div>
+<div class="content">
 
-<div class="title">
+<div class="small">Premium kolekcija</div>
+
 <h1>MOJ PARFEM</h1>
-<p>Originalni parfemi vrhunskog kvaliteta</p>
-</div>
+
+<div class="line"></div>
+
+<p class="desc">
+Originalni parfemi vrhunskog kvaliteta
+</p>
+
+<a href="#" class="btn">Istraži kolekciju</a>
 
 </div>
 
