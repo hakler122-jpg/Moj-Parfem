@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -32,7 +32,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:50px;
-z-index:100;
+z-index:1000;
 }
 
 nav a{
@@ -42,7 +42,8 @@ font-weight:600;
 text-transform:uppercase;
 letter-spacing:2px;
 display:block;
-padding:10px;
+padding:12px 18px;
+white-space:nowrap;
 }
 
 /* HERO */
@@ -142,14 +143,18 @@ position:relative;
 .dropdown-content{
 display:none;
 position:absolute;
-top:40px;
+top:100%;
 left:0;
 background:white;
-min-width:220px;
+min-width:240px;
 box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
 .dropdown:hover .dropdown-content{
+display:block;
+}
+
+.dropdown-content a{
 display:block;
 }
 
@@ -169,7 +174,7 @@ position:absolute;
 left:100%;
 top:0;
 background:white;
-min-width:220px;
+min-width:240px;
 box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
@@ -177,9 +182,15 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
 display:block;
 }
 
+.submenu-content a{
+display:block;
+}
+
 .submenu-content a:hover{
 background:#f2f2f2;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -205,11 +216,13 @@ gap:15px;
 <nav>
 
 <div class="dropdown">
+
 <a href="#">Muški</a>
 
 <div class="dropdown-content">
 
 <div class="submenu">
+
 <a href="#">Mirisi Kao ►</a>
 
 <div class="submenu-content">
@@ -223,14 +236,17 @@ gap:15px;
 </div>
 
 </div>
+
 </div>
 
 <div class="dropdown">
+
 <a href="#">Ženski</a>
 
 <div class="dropdown-content">
 
 <div class="submenu">
+
 <a href="#">Mirisi Kao ►</a>
 
 <div class="submenu-content">
@@ -244,15 +260,29 @@ gap:15px;
 </div>
 
 </div>
+
 </div>
 
 <div class="dropdown">
+
 <a href="#">Brendovi</a>
 
 <div class="dropdown-content">
+<a href="#">Tom Ford</a>
+<a href="#">Dior</a>
+<a href="#">Chanel</a>
+<a href="#">Versace</a>
+<a href="#">Creed</a>
+<a href="#">YSL</a>
 <a href="#">Armani</a>
 <a href="#">Prada</a>
 <a href="#">Givenchy</a>
+<a href="#">Paco Rabanne</a>
+<a href="#">Jean Paul Gaultier</a>
+<a href="#">Valentino</a>
+<a href="#">Bvlgari</a>
+<a href="#">Burberry</a>
+<a href="#">Hugo Boss</a>
 </div>
 
 </div>
@@ -267,7 +297,9 @@ gap:15px;
 
 <div class="content">
 
-<div class="small">Premium kolekcija</div>
+<div class="small">
+Premium kolekcija
+</div>
 
 <h1>MOJ PARFEM</h1>
 
@@ -277,7 +309,9 @@ gap:15px;
 Originalni parfemi vrhunskog kvaliteta
 </p>
 
-<a href="#" class="btn">Istraži kolekciju</a>
+<a href="#" class="btn">
+Istraži kolekciju
+</a>
 
 </div>
 
