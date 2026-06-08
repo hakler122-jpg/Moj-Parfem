@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
@@ -32,7 +32,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:50px;
-z-index:1000;
+z-index:100;
 }
 
 nav a{
@@ -42,8 +42,7 @@ font-weight:600;
 text-transform:uppercase;
 letter-spacing:2px;
 display:block;
-padding:12px 18px;
-white-space:nowrap;
+padding:12px;
 }
 
 /* HERO */
@@ -143,7 +142,7 @@ position:relative;
 .dropdown-content{
 display:none;
 position:absolute;
-top:100%;
+top:48px;
 left:0;
 background:white;
 min-width:240px;
@@ -156,38 +155,18 @@ display:block;
 
 .dropdown-content a{
 display:block;
+padding:12px;
+color:black;
 }
 
 .dropdown-content a:hover{
 background:#f2f2f2;
 }
 
-/* SUBMENU */
-
-.submenu{
-position:relative;
-}
-
-.submenu-content{
-display:none;
-position:absolute;
-left:100%;
-top:0;
-background:white;
-min-width:240px;
-box-shadow:0 10px 20px rgba(0,0,0,.15);
-}
-
-.submenu:hover .submenu-content{
-display:block;
-}
-
-.submenu-content a{
-display:block;
-}
-
-.submenu-content a:hover{
-background:#f2f2f2;
+.dropdown-title{
+font-weight:bold;
+border-bottom:1px solid #ddd;
+cursor:default;
 }
 
 /* MOBILE */
@@ -216,16 +195,10 @@ gap:15px;
 <nav>
 
 <div class="dropdown">
-
 <a href="#">Muški</a>
 
 <div class="dropdown-content">
-
-<div class="submenu">
-
-<a href="#">Mirisi Kao ►</a>
-
-<div class="submenu-content">
+<a class="dropdown-title">Mirisi Kao</a>
 <a href="#">Tommy Shelby</a>
 <a href="#">James Bond</a>
 <a href="#">Bruce Wayne</a>
@@ -235,21 +208,11 @@ gap:15px;
 
 </div>
 
-</div>
-
-</div>
-
 <div class="dropdown">
-
 <a href="#">Ženski</a>
 
 <div class="dropdown-content">
-
-<div class="submenu">
-
-<a href="#">Mirisi Kao ►</a>
-
-<div class="submenu-content">
+<a class="dropdown-title">Mirisi Kao</a>
 <a href="#">Selina Kyle</a>
 <a href="#">Lara Croft</a>
 <a href="#">Wonder Woman</a>
@@ -259,12 +222,7 @@ gap:15px;
 
 </div>
 
-</div>
-
-</div>
-
 <div class="dropdown">
-
 <a href="#">Brendovi</a>
 
 <div class="dropdown-content">
@@ -297,9 +255,7 @@ gap:15px;
 
 <div class="content">
 
-<div class="small">
-Premium kolekcija
-</div>
+<div class="small">Premium kolekcija</div>
 
 <h1>MOJ PARFEM</h1>
 
@@ -309,9 +265,7 @@ Premium kolekcija
 Originalni parfemi vrhunskog kvaliteta
 </p>
 
-<a href="#" class="btn">
-Istraži kolekciju
-</a>
+<a href="#" class="btn">Istraži kolekciju</a>
 
 </div>
 
