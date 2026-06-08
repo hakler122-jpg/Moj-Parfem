@@ -169,7 +169,25 @@ font-weight:bold;
 border-bottom:1px solid #ddd;
 cursor:default;
 }
+  
+.logo-left{
+position:fixed;
+left:25px;
+top:8px;
+display:flex;
+flex-direction:column;
+line-height:0.85;
+font-weight:900;
+font-size:28px;
+letter-spacing:1px;
+color:black;
+z-index:1001;
+pointer-events:none;
+}
 
+.logo-left span{
+display:block;
+}
 /* MOBILE */
 
 @media(max-width:900px){
@@ -192,6 +210,11 @@ gap:15px;
 </style>
 </head>
 <body>
+  
+<div class="logo-left">
+<span>MOJ</span>
+<span>PARFEM</span>
+</div>
 
 <nav>
 
