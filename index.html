@@ -43,6 +43,7 @@ text-transform:uppercase;
 letter-spacing:2px;
 display:block;
 padding:12px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -149,7 +150,7 @@ min-width:240px;
 box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown-content.active{
 display:block;
 }
 
@@ -195,7 +196,7 @@ gap:15px;
 <nav>
 
 <div class="dropdown">
-<a href="#">Muški</a>
+<a class="menu-btn">Muški</a>
 
 <div class="dropdown-content">
 <a class="dropdown-title">Mirisi Kao</a>
@@ -209,7 +210,7 @@ gap:15px;
 </div>
 
 <div class="dropdown">
-<a href="#">Ženski</a>
+<a class="menu-btn">Ženski</a>
 
 <div class="dropdown-content">
 <a class="dropdown-title">Mirisi Kao</a>
@@ -223,7 +224,7 @@ gap:15px;
 </div>
 
 <div class="dropdown">
-<a href="#">Brendovi</a>
+<a class="menu-btn">Brendovi</a>
 
 <div class="dropdown-content">
 <a href="#">Tom Ford</a>
@@ -270,6 +271,43 @@ Originalni parfemi vrhunskog kvaliteta
 </div>
 
 </section>
+
+<script>
+
+const buttons = document.querySelectorAll('.menu-btn');
+
+buttons.forEach(button => {
+
+button.addEventListener('click', function(e){
+
+e.stopPropagation();
+
+const menu =
+this.parentElement.querySelector('.dropdown-content');
+
+document.querySelectorAll('.dropdown-content').forEach(item => {
+
+if(item !== menu){
+item.classList.remove('active');
+}
+
+});
+
+menu.classList.toggle('active');
+
+});
+
+});
+
+document.addEventListener('click', function(){
+
+document.querySelectorAll('.dropdown-content').forEach(item => {
+item.classList.remove('active');
+});
+
+});
+
+</script>
 
 </body>
 </html>
